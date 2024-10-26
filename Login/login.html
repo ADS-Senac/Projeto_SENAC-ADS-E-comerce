@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./login.css">
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../LOGIN/media-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="../LOGIN/login.js" ></script>
 </head>
+
 <body>
+    <main>
+        <header>
+            <div class="interface">
+                <div class="logo">
+                    <a href="../HOME/home.html">
+                        <img src="../imagens/logo-removebg-preview.png" width="230" alt="Logo">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="../INFO/empresa.html">Sobre a Empresa</a></li>
+                        <li><a href="../HOME/home.html">Home</a></li>
+                    </ul>
+                </nav>
+                <div class="btn">
+                    <a href="../CARRINHO/carrinho.html">
+                        <button>Meu Carrinho</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+        <section id="login">
+            <div id="imagem"></div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <form id="loginForm" onsubmit="return validaLogin(event)">
+                    <div class="campo">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="text" name="nome" id="inome" placeholder="Digite seu nome" required minlength="8" maxlength="20">
+                        <label for="inome">Nome</label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-symbols-outlined">login</span>
+                        <input type="email" name="login" id="ilogin" placeholder="Seu E-mail" required maxlength="40">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-symbols-outlined">lock</span>
+                        <input type="password" name="senha" id="isenha" placeholder="Digite sua senha" required minlength="8" maxlength="20">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Entrar" id="entrar" disabled>
+                    <a href="esqueci.html" class="botao">
+                        Esqueci a senha <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </form>
+                <div id="error-message"; display: none;></div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="rodape">
+        <h4>2024 ShoppingCart Brasil | Fone (xx) xxxx - xxxx | faleconosco@shoppingcart.com.br</h4>
+    </footer>
 
-
-    <script src="./login.js"></script>
+  
+        
+    
 </body>
 </html>

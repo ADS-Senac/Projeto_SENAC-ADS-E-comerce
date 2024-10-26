@@ -45,7 +45,7 @@ function validaLogin(event) {
     }
 
     // Redireciona para a página home.html
-    window.location.href = "home.html";
+    window.location.href = "../Home/home.html";
     return true; // Retorna true se a validação passar
 }
 

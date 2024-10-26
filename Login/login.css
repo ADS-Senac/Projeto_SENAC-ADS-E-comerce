@@ -145,14 +145,6 @@ div.campo >input:focus-within {
         background-color:#d099e7;
     
 }
-*{
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
-      
-    
-}
-
 
 body{
     background-color:  #5f2d81;

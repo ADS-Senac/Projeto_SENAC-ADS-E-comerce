@@ -17,29 +17,20 @@ html, body {
         font-size: 12px;
         color: white;
         text-align:center;
-        padding:0px;
         bottom: 0;
         width: 100%;
+        height: 4%;
         position:absolute;
         background-color:#d099e7;
-    
+        display: flex;
+        justify-content: center;
+        align-items: center;   
 }
-*{
-    margin: 0 ;
-    padding: 0;
-    box-sizing: border-box;
-      
-    
-}
-
 
 body{
     background-color:  #5f2d81;
     height: 100vh; 
 }
-
-
-
 
 header > .interface{
  
@@ -49,16 +40,10 @@ header > .interface{
     justify-content: space-between;
     background-color: #d099e7;  
     position: absolute;  
-    left: 0;  
+    left: 0;
     right: 0;  
-    top: 1px;  
-    height: 90px;  
-    border-radius: p1x;
-    
-      
-   
+    height: 10%;
     box-shadow: 0 0 25px 0 black; 
-     
     }
     header a{
         color: black;
@@ -80,7 +65,7 @@ header > .interface{
 
     header nav ul li{
         display: inline-block;
-        padding: 30px;
+        padding: 2em;
         
     button [disabled]{
         opacity: 0.8;
@@ -103,30 +88,33 @@ header > .interface{
         box-shadow: 0px 0px 8px rgb(246, 245, 246);
     }
     
-    .carrinhoside{
+    .carrinho-side{
             padding: 10px;
             right:0px;
             top:91.5px;
             position:fixed;
-            width: 300px; 
-            height: 500px; 
+            width: 20%;
+            height: 100vh; 
             overflow-y: auto;
             background:linear-gradient(to top, #49227c, #8249cd) ;
             border: 1px solid #5c17f3; 
             border-radius: 2px;
-            padding: 10px;
             box-sizing: border-box; 
             text-align: center;
             font-family:'Courier New', Courier, monospace;
             
         
     }
-    .carrinhoside > h3 {
-        background-color: aliceblue;
+    .carrinho-side > h3 {
+        background-color: rgb(240, 240, 243);
         box-sizing: border-box;
         border-radius: 2px;
         padding: 0;
         border: 1px solid black;
-        
-        
+    }
+
+    input {
+        height: 2em;
+        width: 20em;
+        border-radius: 4px;
     }

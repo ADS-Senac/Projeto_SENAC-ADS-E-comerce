@@ -1,17 +1,20 @@
-
 // Etapa 2
-async function chamarApi() {
-    const termoBusca = document.getElementById("inputBusca").value.trim(); // Pega o termo de busca digitado
-    if (!termoBusca) return alert("Digite o produto");
-    const URL = `https://api.mercadolibre.com/sites/MLB/search?q=${termoBusca}`; // Monta a URL para a API
+async function chamarApi(query) {
+    if (!query) return alert("Digite o produto");
+    const URL = `https://api.mercadolibre.com/sites/MLB/search?q=${query}`; // Monta a URL para a API
     const response = await fetch(URL); // Faz a requisição à URL
     const data = await response.json(); // Converte a resposta para JSON
-    renderizarProdutos(data.results); // Chama a função renderizarProdutos com os dados retornados
-    return data; // Retorna os dados
+    return data.results; // Retorna somente a lista de produtos
 }
 
+async function pesquisarProduto() {
+    const termoBusca = document.getElementById("inputBusca").value.trim(); // Pega o termo de busca digitado
+    const produtos = await chamarApi(termoBusca);
+    renderizarProdutos(produtos); // Chama a função renderizarProdutos com os dados retornados
+};
+
 document.getElementById("inputBusca").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") chamarApi(); // Adiciona evento para realizar busca ao pressionar 'Enter'
+    if (event.key === "Enter") pesquisarProduto(); // Adiciona evento para realizar busca ao pressionar 'Enter'
 });
 
 function renderizarProdutos(produtos) {
@@ -28,7 +31,7 @@ function renderizarProdutos(produtos) {
         const produtoDiv = document.createElement('div'); // Cria um div para o produto
         produtoDiv.classList.add('produto'); // Adiciona uma classe para estilização
         produtoDiv.innerHTML = `
-            <h2>${produto.title}</h2>
+            <h3>${produto.title}</h3>
             <img src="${produto.thumbnail}" alt="${produto.title}">
             <p>Preço: R$${produto.price}</p>
         `;

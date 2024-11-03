@@ -1,3 +1,4 @@
+
 // Etapa 2
 async function chamarApi() {
     const termoBusca = document.getElementById("inputBusca").value.trim(); // Pega o termo de busca digitado

@@ -96,6 +96,89 @@ header > .interface{
     header .btn button:hover{
         box-shadow: 0px 0px 8px rgb(246, 245, 246);
     }
+    .caixa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #2e014d;
+        color: white;
+        padding: 20px;
+    }
     
+    .caixa h2 {
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .caixa .card {
+        background-color: #3a025a;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .caixa .card h3 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    
+    .caixa .card p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+    
+    .valores-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .valores-list li {
+        font-size: 1.2em;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+    
+    .valores-list li strong {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .visao-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .visao-list li {
+        font-size: 1.2em;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+    
+    .visao-list li strong {
+        color: #4caf50; 
+        font-weight: bold;
+    }
+
+    .empresa-list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .empresa-list li {
+        font-size: 1.2em;
+        margin: 10px 0;
+        line-height: 1.6;
+    }
+    
+    .empresa-list li strong {
+        color: #42a5f5; 
+        font-weight: bold;
+    }
    
     

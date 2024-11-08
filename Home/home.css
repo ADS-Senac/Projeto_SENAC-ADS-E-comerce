@@ -168,7 +168,7 @@ main {
 }
 
 .produto {
-    border: 1px solid #ddd;
+    border: 1px solid #837e7e;
     border-radius: 4px;
     padding: 2em;
     max-width: 20%;
@@ -179,6 +179,12 @@ main {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(156, 156, 156);
+    opacity: 85%;
+}
+
+.produto:hover {
+    opacity: 100%;
 }
 
 .produto img {
@@ -195,6 +201,7 @@ main {
 .produto p {
     font-size: 1em;
     color: #f7f7f7;
+    margin: 1em;
 }
 
 
@@ -211,4 +218,34 @@ main {
 
 .produto button:hover {
     background-color: #218838;
+}
+
+#cart-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-carrinho {
+    border: 1px solid black;
+    font-size: small;
+    margin: 1em;
+    background-color: rgb(247, 247, 247);
+    opacity: 85%;
+}
+
+.item-carrinho:hover {
+    opacity: 100%;
+}
+
+.item-carrinho img {
+    margin-top: 1em;
+    
+}
+
+#total-price {
+    background-color: rgb(156, 155, 155);
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

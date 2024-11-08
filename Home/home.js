@@ -1,4 +1,3 @@
-// Etapa 2
 async function chamarApi(query) {
     if (!query) return alert("Digite o produto");
     const URL = `https://api.mercadolibre.com/sites/MLB/search?q=${query}`; // Monta a URL para a API
@@ -39,7 +38,45 @@ function renderizarProdutos(produtos) {
         const botaoAdicionar = document.createElement('button'); // Cria o botão "Adicionar ao Carrinho"
         botaoAdicionar.innerText = 'Adicionar ao Carrinho';
         botaoAdicionar.classList.add('btn-adicionar');
+        botaoAdicionar.onclick=() => adicionarAoCarrinho(produto.title, produto.thumbnail, produto.price);
         produtoDiv.appendChild(botaoAdicionar);
         container.appendChild(produtoDiv);
     });
+}
+
+let totalCarrinho = 0; // Variável para armazenar o total do carrinho
+
+// Função para adicionar um item ao carrinho de compras
+function adicionarAoCarrinho(title, thumbnail, price) {
+    
+    const carrinhoContainer = document.getElementById("cart-products");// Seleciona o elemento do carrinho
+
+    const itemCarrinho = document.createElement("div");// Cria um contêiner para o item do carrinho
+    itemCarrinho.classList.add("item-carrinho"); // Classe para estilizar itens no CSS
+
+    // Cria e adiciona a imagem do produto
+    const imagem = document.createElement("img");
+    imagem.src = thumbnail;
+    imagem.alt = title;
+    itemCarrinho.appendChild(imagem);
+
+    // Cria e adiciona o título do produto
+    const titulo = document.createElement("p");
+    titulo.innerText = title;
+    itemCarrinho.appendChild(titulo);
+
+    // Cria e adiciona o preço do produto
+    const preco = document.createElement("p");
+    preco.innerText = `R$ ${price.toFixed(2)}`;
+    itemCarrinho.appendChild(preco);
+
+    // Adiciona o item ao carrinho
+    carrinhoContainer.appendChild(itemCarrinho);
+
+    // Atualiza o total do carrinho
+    totalCarrinho += price;
+
+    // Atualiza o valor total exibido no elemento HTML
+    const totalPriceElement = document.getElementById("total-price");
+    totalPriceElement.innerText = `Total: R$ ${totalCarrinho.toFixed(2)}`;
 }

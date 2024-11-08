@@ -6,7 +6,7 @@
 }
 
 html, body {
-    background-color: #49227c;
+    background-color: #faf9fb;
     height: 100%;
     width: 100%;
     overflow: hidden; 
@@ -30,7 +30,7 @@ section#login {
 }
 
 section#login > div#imagem {
-    background: #371180 url(../imagens/Alura.jpeg) no-repeat;
+    background: #f3f1f6 url(../imagens/Alura.jpeg) no-repeat;
     background-size: cover;
     height: 200px;
     background-position: left top;
@@ -48,7 +48,7 @@ form > input[type=submit] {
     font-size: 1em;
     width: 100%;
     height: 40px;
-    background-color: #3e1269 ;
+    background-color: #f4f0f7 ;
     color: white;
     border: none;
     border-radius: 8px;

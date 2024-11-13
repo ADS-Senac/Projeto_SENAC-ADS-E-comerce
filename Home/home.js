@@ -4,7 +4,7 @@ async function chamarApi(query) {
     const response = await fetch(URL); // Faz a requisição à URL
     const data = await response.json(); // Converte a resposta para JSON
     return data.results; // Retorna somente a lista de produtos
-}
+};
 
 async function pesquisarProduto() {
     const termoBusca = document.getElementById("inputBusca").value.trim(); // Pega o termo de busca digitado
@@ -42,16 +42,26 @@ function renderizarProdutos(produtos) {
         produtoDiv.appendChild(botaoAdicionar);
         container.appendChild(produtoDiv);
     });
-}
+};
 
 let totalCarrinho = 0; // Variável para armazenar o total do carrinho
 
 // Função para adicionar um item ao carrinho de compras
 function adicionarAoCarrinho(title, thumbnail, price) {
+    let storage = localStorage.getItem("carrinho"); // guardamos a chave carrinho do localstorage na variavel 
+    if (!storage){ // verificamos se a chave carrinho NÃO existe no localStorage
+        const primeiroProduto = [{title, thumbnail, price}];
+        localStorage.setItem("carrinho",JSON.stringify(primeiroProduto));
+    } else {
+        storage = JSON.parse(storage) //retornou o dado para o seu tipo de origem ( array )
+        storage.push({title, thumbnail, price}) //adicionamos um obj c/ as inf dos produtos para o array
+        localStorage.setItem("carrinho", JSON.stringify(storage)) // atualiza o localstorage
+    }
     
-    const carrinhoContainer = document.getElementById("cart-products");// Seleciona o elemento do carrinho
-
-    const itemCarrinho = document.createElement("div");// Cria um contêiner para o item do carrinho
+    
+    
+    const carrinhoContainer = document.getElementById("cart-products"); // Seleciona o elemento do carrinho
+    const itemCarrinho = document.createElement("div"); // Cria um contêiner para o item do carrinho
     itemCarrinho.classList.add("item-carrinho"); // Classe para estilizar itens no CSS
 
     // Cria e adiciona a imagem do produto
@@ -79,4 +89,18 @@ function adicionarAoCarrinho(title, thumbnail, price) {
     // Atualiza o valor total exibido no elemento HTML
     const totalPriceElement = document.getElementById("total-price");
     totalPriceElement.innerText = `Total: R$ ${totalCarrinho.toFixed(2)}`;
-}
+};
+
+
+//****************Etapa 4**********************
+// ATENÇÃO !! voces ainda vão chamar outras funções dentro da reloadPage
+function reloadPage() {
+    const mensagem = document.getElementById("message");
+    let userStorage = localStorage.getItem("user"); // Busco as informações do usuario no localStorage, caso exista
+    if (userStorage) {
+        userStorage = JSON.parse(userStorage);
+        mensagem.innerHTML = `Bem Vindo ${userStorage.nome}!!`; // Renderizo a mensagem de bem vindo na tela
+    }
+};
+
+reloadPage();

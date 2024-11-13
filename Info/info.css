@@ -14,8 +14,8 @@ html, body {
 
     .rodape{
         font-family:'Times New Roman', Times, serif;
-        font-size: 12px;
-        color: white;
+        font-size: 0.9em;
+        color: black;
         text-align:center;
         bottom: 0;
         width: 100%;
@@ -31,9 +31,6 @@ body{
     background-color:  #5f2d81;
     height: 100vh; 
 }
-
-
-
 
 header > .interface{
  

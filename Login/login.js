@@ -44,6 +44,10 @@ function validaLogin(event) {
         return false;
     }
 
+    // Etapa 4.1 
+    // Salvando o nome e o email do usuário no LocalStorage
+    localStorage.setItem("user", JSON.stringify({nome, email}));
+
     // Redireciona para a página home.html
     window.location.href = "../Home/home.html";
     return true; // Retorna true se a validação passar

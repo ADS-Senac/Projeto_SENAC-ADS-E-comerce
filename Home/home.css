@@ -9,14 +9,14 @@ html,
 body {
     height: 100vh;
     max-width: 100%;
-    background-color: #5f2d81;
+    background-color: #dbdada;
     display: flex;
 }
 
 .rodape {
     font-family: 'Times New Roman', Times, serif;
     font-size: 0.9em;
-    color: white;
+    color: black;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -28,9 +28,7 @@ body {
     align-items: center;
 }
 
-
 header>.interface {
-
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
@@ -39,7 +37,8 @@ header>.interface {
     position: fixed;
     height: 10%;
     width: 100%;
-    box-shadow: 0 0 25px 0 black;
+    box-shadow: 0 0 15px 0 black;
+    z-index: 1000;
 }
 
 header a {
@@ -54,7 +53,6 @@ header a:hover {
     transform: scale(1.10);
 
 }
-
 
 header nav ul {
     list-style-type: none;
@@ -129,11 +127,12 @@ header .btn button:hover {
     width: 20%;
     height: 100%;
     margin-top: 4.9%;
+    padding-bottom: 10em;
     right: 0px;
     position: fixed;
     overflow-y: auto;
-    background: linear-gradient(to top, #49227c, #8249cd);
-    border: 1px solid #5c17f3;
+    background: linear-gradient(to top, #653f97, #a67fd8);
+    border: 1px solid #a67fd8;
     border-radius: 2px;
     box-sizing: border-box;
     text-align: center;
@@ -168,7 +167,7 @@ main {
 }
 
 .produto {
-    border: 1px solid #ddd;
+    border: 1px solid #837e7e;
     border-radius: 4px;
     padding: 2em;
     max-width: 20%;
@@ -179,6 +178,12 @@ main {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(184, 184, 184);
+}
+
+.produto:hover {
+    background-color: #dbdada;
+    border: 1px solid  #dbdada;
 }
 
 .produto img {
@@ -194,7 +199,9 @@ main {
 
 .produto p {
     font-size: 1em;
-    color: #f7f7f7;
+    color: #000000;
+    font-weight: bold;
+    margin: 1em;
 }
 
 
@@ -211,4 +218,42 @@ main {
 
 .produto button:hover {
     background-color: #218838;
+}
+
+#cart-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-carrinho {
+    border: 1px solid black;
+    font-weight: 500;
+    margin: 1em;
+    padding: 1em;
+    background-color: rgb(247, 247, 247);
+    opacity: 85%;
+}
+
+.item-carrinho:hover {
+    opacity: 100%;
+}
+
+.item-carrinho img {
+    margin-top: 1em;
+    
+}
+
+#total-price {
+    background-color: rgb(190, 190, 190);
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#message {
+    font-weight: bold;
+    font-size: larger;
 }

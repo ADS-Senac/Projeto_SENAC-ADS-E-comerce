@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-
-
-// Etapa 4
-
-=======
 async function chamarApi(query) {
     if (!query) return alert("Digite o produto");
     const URL = `https://api.mercadolibre.com/sites/MLB/search?q=${query}`; // Monta a URL para a API
@@ -167,4 +161,3 @@ function reloadPage() {
 }
 
 reloadPage(); // Chama a função para renderizar o carrinho ao recarregar a página
->>>>>>> Stashed changes

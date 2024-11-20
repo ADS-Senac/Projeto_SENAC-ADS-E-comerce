@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-// Etapa 3
-=======
 function renderizarCarrinho() { 
     let storage = localStorage.getItem("carrinho");
     const main = document.getElementById("carrinho"); // Seleciona o elemento HTML onde o carrinho será exibido
@@ -54,4 +51,3 @@ function removerProdutoCarrinho(id) {
 
 renderizarCarrinho(); // Chama a função de renderizar o carrinho
 valorTotal(); // Chama a função para calcular o total do carrinho
->>>>>>> Stashed changes

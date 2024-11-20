@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./carrinho.css">
     <title>Carrinho</title>
+    <link rel="stylesheet" href="./carrinho.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
+
 <body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="../Home/home.html">
+                    <img src="../imagens/logo-removebg-preview.png" width="230">
+                </a>        
+            </div>
+            <h1>Carrinho</h1>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <div class="btn">
+                            <a href="../Info/empresa.html">
+                                <button>Sobre a empresa</button>
+                            </a>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="btn">
+                            <a href="../Login/login.html">
+                                <button>Login</button>
+                            </a>    
+                        </div> 
+                    </li>       
+                </ul>
+            </nav>                       
+        </div>    
+    </header>
+    <main>
+        <div id="carrinho"></div>
+        <div id="preco">
+            <p>Valor Total: R$ <span id="valor-total">0.00</span></p>
+        </div>
+    </main>
     
+    <footer class="rodape">
+        <h4>2024 TecPlay Brasil | Fone (xx) xxxx - xxxx | faleconosco@TecPlay.com.br</h4>
+    </footer>
 
     <script src="./carrinho.js"></script>
 </body>

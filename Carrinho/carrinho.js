@@ -13,7 +13,7 @@ function renderizarCarrinho() {
                 <h3>${produto.title}</h3>
                 <img src="${produto.thumbnail}" alt="${produto.title}">
                 <p>Preço: R$${produto.price.toFixed(2)}</p>
-                <button class="btn-remover" onclick="removerProdutoCarrinho(${produto.id})">X</button>
+                <button class="btn-remover" onclick="removerProdutoCarrinho(${produto.id})">Remover</button>
             `;
 
             // Adiciona o elemento do produto à área principal do carrinho
@@ -22,6 +22,8 @@ function renderizarCarrinho() {
     } else {
         localStorage.setItem("carrinho", JSON.stringify([])); // Caso não exista, eu seto no LocalStorage um array vazio
     }
+
+    atualizarQuantidadeItens(); // Atualiza a quantidade de itens no carrinho
 }
 
 function valorTotal() {
@@ -47,6 +49,39 @@ function removerProdutoCarrinho(id) {
         renderizarCarrinho(); // Re-renderiza os itens do carrinho
         valorTotal(); // Atualiza o valor total após a remoção do item
     }
+}
+
+function atualizarQuantidadeItens() {
+    let storage = localStorage.getItem("carrinho");
+    const quantidadeItens = document.getElementById("quantidade-itens"); // Elemento que exibe a quantidade de itens
+    let quantidade = 0;
+    if (storage) {
+        storage = JSON.parse(storage);
+        quantidade = storage.length; // A quantidade é igual ao número de itens no array
+    }
+    quantidadeItens.innerHTML = `Quantidade de itens: ${quantidade}`; // Exibe a quantidade no elemento
+}
+
+function limparCarrinho() {
+    localStorage.setItem("carrinho", JSON.stringify([])); // Define o carrinho como um array vazio no LocalStorage
+    renderizarCarrinho(); // Re-renderiza o carrinho vazio
+    valorTotal(); // Atualiza o valor total para 0
+    atualizarQuantidadeItens(); // Atualiza a quantidade de itens para 0
+}
+
+function finalizarCompra() {
+    let storage = localStorage.getItem("carrinho");
+    let quantidade = 0;
+    let total = 0;
+
+    if (storage) {
+        storage = JSON.parse(storage);
+        quantidade = storage.length; // Obtém a quantidade de itens
+        storage.forEach(produto => total += produto.price); // Soma os preços
+    }
+
+    alert(`Total: R$${total.toFixed(2)}\nQuantidade de itens: ${quantidade}`); // Exibe o total e a quantidade em um alert
+    limparCarrinho();
 }
 
 renderizarCarrinho(); // Chama a função de renderizar o carrinho

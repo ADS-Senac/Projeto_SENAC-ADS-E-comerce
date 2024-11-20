@@ -160,4 +160,21 @@ function reloadPage() {
     atualizarTotalCarrinho(); // Atualiza o total do carrinho
 }
 
+function carregarMensagemBoasVindas() {
+    // Buscar os dados do usuário no localStorage
+    const userData = localStorage.getItem("user");
+    if (userData) {
+        // Converter a string JSON em objeto
+        const { nome } = JSON.parse(userData);
+
+        // Atualizar o elemento com o nome do usuário
+        const userNameElement = document.getElementById("user-name");
+        userNameElement.textContent = nome;
+    }
+}
+
+// Chamar a função ao carregar a página
+document.addEventListener("DOMContentLoaded", carregarMensagemBoasVindas);
+
+
 reloadPage(); // Chama a função para renderizar o carrinho ao recarregar a página

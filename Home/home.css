@@ -260,14 +260,14 @@ main {
 
 .btn-remover {
     border-radius: 10px;
-    background-color: rgb(219, 131, 131);
+    background-color: rgb(255, 103, 103);
     width: 50px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
 }
 
 .btn-remover:hover {
     border-radius: 10px;
-    background-color: rgb(221, 95, 95);
+    background-color: rgb(209, 18, 18);
     width: 50px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
     color: white;

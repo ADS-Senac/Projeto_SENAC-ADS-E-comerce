@@ -9,47 +9,49 @@
 </head>
 
 <body>
-        <header>
-            <div class="interface">
-                <div class="logo>">
-                    <a href="../Home/home.html">
-                        <img src="../imagens/logo-removebg-preview.png"width="230">
-                    </a>        
-                </div>
-                <h1>Carrinho</h1>
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <div class="btn">
-                                <a href="../Info/empresa.html">
-                                    <button>Sobre a empresa</button>
-                                </a>
-                            </div> 
-                        </li>
-                        <li>
-                            <div class="btn">
-                                <a href="../Login/login.html">
-                                    <button>Login</button>
-                                </a>    
-                            </div> 
-                        </li>       
-                    </ul>
-                </nav>                       
-            </div>    
-        </header>
-        <main id="carrinho">
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="../Home/home.html">
+                    <img src="../imagens/logo-removebg-preview.png" width="230">
+                </a>        
+            </div>
+            <h1>Carrinho</h1>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <div class="btn">
+                            <a href="../Info/empresa.html">
+                                <button>Sobre a empresa</button>
+                            </a>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="btn">
+                            <a href="../Login/login.html">
+                                <button>Login</button>
+                            </a>    
+                        </div> 
+                    </li>       
+                </ul>
+            </nav>                       
+        </div>    
+    </header>
 
-        </main>
-              
-               
-
-             
-   
-   
-   
-                </main>
+    <main>
+        <div id="carrinho"></div>
+        <div id="preco">
+            <p id="quantidade-itens">Quantidade de itens: 0</p>
+            <p>Valor Total: R$ <span id="valor-total">0.00</span></p>
+            <button id="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+            <button id="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+    </main>
+    
     <footer class="rodape">
         <h4>2024 TecPlay Brasil | Fone (xx) xxxx - xxxx | faleconosco@TecPlay.com.br</h4>
     </footer>
+
+    <script src="./carrinho.js"></script>
 </body>
 </html>

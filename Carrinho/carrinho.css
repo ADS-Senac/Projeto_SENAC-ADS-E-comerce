@@ -96,6 +96,7 @@ main {
 
 .produto-carrinho {
     width: 20%;
+    min-width: 20vw;
     border: 1px solid #837e7e;
     margin: 1em;
     display: flex;

@@ -171,6 +171,7 @@ main {
     border-radius: 4px;
     padding: 2em;
     max-width: 20%;
+    min-width: 15vw;
     margin: 2em;
     text-align: center;
     display: flex;
@@ -251,6 +252,7 @@ main {
     align-items: center;
     color: rgb(0, 0, 0);
     font-weight: bold;
+    border: 2px solid black;
 }
 
 #message {

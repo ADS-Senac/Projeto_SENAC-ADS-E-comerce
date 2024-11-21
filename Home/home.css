@@ -68,11 +68,11 @@ header nav ul {
 header nav ul li {
     display: inline-block;
     padding: 10px;
+}
 
-    button [disabled] {
-        opacity: 0.8;
-    }
-};
+header nav ul li button[disabled] {
+    opacity: 0.8;
+}
 
 .btn a button {
     height: 30px;
@@ -105,7 +105,6 @@ header nav ul li {
 .container-search button {
     margin-left: 8px;
 }
-
 
 .btn button {
     padding: 15px;
@@ -255,14 +254,14 @@ main {
     border: 2px solid black;
 }
 
-#message {
+#welcome-message {
     font-weight: bold;
     font-size: larger;
 }
 
 .btn-remover {
     border-radius: 10px;
-    background-color: rgb(255, 103, 103);
+    background-color: rgb(255, 103, 103);   
     width: 50px;
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
 }

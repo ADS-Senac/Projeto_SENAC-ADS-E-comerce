@@ -6,7 +6,7 @@
 }
 
 html, body {
-    background-color: #49227c;
+    background-color: #faf9fb;
     height: 100%;
     width: 100%;
     overflow: hidden; 
@@ -30,7 +30,7 @@ section#login {
 }
 
 section#login > div#imagem {
-    background: #371180 url(../imagens/Alura.jpeg) no-repeat;
+    background: #f3f1f6 url(../imagens/Alura.jpeg) no-repeat;
     background-size: cover;
     height: 200px;
     background-position: left top;
@@ -39,9 +39,6 @@ section#login > div#imagem {
 section#login > div#formulario {
     padding: 10px;
 }
-
-
-
 
 form > input[type=submit] {
     display:block;
@@ -53,6 +50,10 @@ form > input[type=submit] {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+input[type=submit]:disabled {
+    opacity: 50%;
 }
 
 form > input[type=submit]:hover {
@@ -133,7 +134,6 @@ div.campo >input:focus-within {
     font-size: 20px;
 }
 
-
 .rodape{
 
         font-family:'Times New Roman', Times, serif;
@@ -184,19 +184,19 @@ header a:hover{
     
 }
 
-
 header nav ul{
     list-style-type: none;  
 }
 
-header nav ul li{
+header nav ul li {
     display: inline-block;
     padding: 30px;
-    
-button [disabled]{
-    opacity: 0.8;
-}   
 }
+
+header nav ul li button[disabled] {
+    opacity: 0.8;
+}
+
 header .btn button{
     
     padding: 15px;
@@ -213,4 +213,3 @@ header .btn button{
 header .btn button:hover{
     box-shadow: 0px 0px 8px rgb(246, 245, 246);
 }
-

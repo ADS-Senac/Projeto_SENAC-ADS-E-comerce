@@ -72,6 +72,7 @@ function validaLogin(event) {
         return false;
     }
 
+
     // Etapa 4.1: Salvando o nome, e-mail e senha do usuário no localStorage
     const userData = { nome, email };
     localStorage.setItem("user", JSON.stringify(userData));
@@ -98,3 +99,4 @@ document.addEventListener("DOMContentLoaded", function() {
         carregarUsuario(); // Carrega o nome do usuário na página home
     }
 });
+

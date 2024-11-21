@@ -133,7 +133,9 @@ div.campo >input:focus-within {
     font-size: 20px;
 }
 
+
 .rodape{
+
         font-family:'Times New Roman', Times, serif;
         font-size: 0.9em;
         color: black;
@@ -153,6 +155,7 @@ body{
     height: 100vh; 
 }
 
+
 header > .interface{
     font-family:'Courier New', Courier, monospace;
     display: flex;
@@ -165,7 +168,8 @@ header > .interface{
     top: 1px;  
     height: 90px;  
     border-radius: p1x;
-    box-shadow: 0 0 25px 0 black; 
+    box-shadow: 0 0 25px 0 black;
+ 
     }
 header a{
     color: black;
@@ -209,3 +213,4 @@ header .btn button{
 header .btn button:hover{
     box-shadow: 0px 0px 8px rgb(246, 245, 246);
 }
+

@@ -38,7 +38,8 @@ function renderizarProdutos(produtos) {
         const botaoAdicionar = document.createElement('button'); // Cria o botão "Adicionar ao Carrinho"
         botaoAdicionar.innerText = 'Adicionar ao Carrinho';
         botaoAdicionar.classList.add('btn-adicionar');
-        botaoAdicionar.onclick = () => adicionarAoCarrinho(produto.title, produto.thumbnail, produto.price);
+
+        botaoAdicionar.onclick=() => adicionarAoCarrinho(produto.title, produto.thumbnail, produto.price);
         produtoDiv.appendChild(botaoAdicionar);
         container.appendChild(produtoDiv);
     });

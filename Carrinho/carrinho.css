@@ -38,47 +38,47 @@ header > .interface{
     border-radius: p1x;
     box-shadow: 0 0 25px 0 black; 
     }
-    header a{
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-        
-    }
-    
-    header a:hover{
-        color: rgb(145, 68, 196);
-        transform: scale(1.10);
-        
-    }
-    
-    
-    header nav ul{
-        list-style-type: none;  
-    }
 
-    header nav ul li{
-        display: inline-block;
-        padding: 30px;
+header a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+header a:hover{
+    color: rgb(145, 68, 196);
+    transform: scale(1.10);
+    
+}
         
+header nav ul{
+    list-style-type: none;  
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 30px;
+    
     button [disabled]{
         opacity: 0.8;
     }   
-    }
-    header .btn button{
-        padding: 15px;
-        font-size: 18;
-        font-weight: 100;
-        background-color: rgb(178, 52, 203);
-        border: 0;
-        border-radius: 30px;
-        cursor: pointer;
-        position: relative; 
-        margin-right: 100px; 
-    }
-    
-    header .btn button:hover{
-        box-shadow: 0px 0px 8px rgb(246, 245, 246);
-    }
+}
+header .btn button{
+    padding: 15px;
+    font-size: 18;
+    font-weight: 100;
+    background-color: rgb(178, 52, 203);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative; 
+    margin-right: 100px; 
+}
+
+header .btn button:hover{
+    box-shadow: 0px 0px 8px rgb(246, 245, 246);
+}
 
 main {
     display: flex;
@@ -97,6 +97,9 @@ main {
 
 .produto-carrinho {
     width: 20%;
+
+    min-width: 20vw;
+
     border: 1px solid #837e7e;
     margin: 1em;
     display: flex;
@@ -128,8 +131,63 @@ main {
     background-color: white;
     border-radius: 4px;
     border: 1px solid black;
+    padding-bottom: 10px;
 }
 
 #preco p {
     padding: 1em;
+}
+
+.btn-remover {
+    border-radius: 10px;
+    background-color: rgb(255, 103, 103);
+    width: 80px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
+    margin: 10px;
+    padding: 5px;
+}
+
+.btn-remover:hover {
+    border-radius: 10px;
+    background-color: rgb(209, 18, 18);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
+    color: white;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+#btn-finalizar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+    margin-top: 15px;
+    border: 2px solid gray;
+}
+
+#btn-finalizar:hover {
+    background-color: #347938;
+}
+
+#btn-limpar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    border: 2px solid gray;
+}
+
+#btn-limpar:hover {
+    background-color: #ca322f;
+    border: 2px solid white;
+    transition-duration: .3s;
 }

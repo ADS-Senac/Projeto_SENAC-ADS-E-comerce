@@ -37,10 +37,14 @@
             </nav>                       
         </div>    
     </header>
+
     <main>
         <div id="carrinho"></div>
         <div id="preco">
+            <p id="quantidade-itens">Quantidade de itens: 0</p>
             <p>Valor Total: R$ <span id="valor-total">0.00</span></p>
+            <button id="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+            <button id="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
         </div>
     </main>
     

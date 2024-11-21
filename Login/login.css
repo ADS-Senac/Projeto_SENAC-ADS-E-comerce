@@ -133,7 +133,9 @@ div.campo >input:focus-within {
     font-size: 20px;
 }
 
-    .rodape{
+
+.rodape{
+
         font-family:'Times New Roman', Times, serif;
         font-size: 0.9em;
         color: black;
@@ -154,10 +156,7 @@ body{
 }
 
 
-
-
 header > .interface{
- 
     font-family:'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
@@ -169,53 +168,49 @@ header > .interface{
     top: 1px;  
     height: 90px;  
     border-radius: p1x;
-    
-      
-   
-    box-shadow: 0 0 25px 0 black; 
-     
+    box-shadow: 0 0 25px 0 black;
+ 
     }
-    header a{
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-        
-    }
+header a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
     
-    header a:hover{
-        color: rgb(145, 68, 196);
-        transform: scale(1.10);
-        
-    }
-    
-    
-    header nav ul{
-        list-style-type: none;  
-    }
+}
 
-    header nav ul li{
-        display: inline-block;
-        padding: 30px;
-        
-    button [disabled]{
-        opacity: 0.8;
-    }   
-    }
-    header .btn button{
-        
-        padding: 15px;
-        font-size: 18;
-        font-weight: 100;
-        background-color: rgb(178, 52, 203);
-        border: 0;
-        border-radius: 30px;
-        cursor: pointer;
-        position: relative; 
-        margin-right: 100px; 
-    }
+header a:hover{
+    color: rgb(145, 68, 196);
+    transform: scale(1.10);
     
-    header .btn button:hover{
-        box-shadow: 0px 0px 8px rgb(246, 245, 246);
-    }
+}
+
+
+header nav ul{
+    list-style-type: none;  
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 30px;
     
+button [disabled]{
+    opacity: 0.8;
+}   
+}
+header .btn button{
     
+    padding: 15px;
+    font-size: 18;
+    font-weight: 100;
+    background-color: rgb(178, 52, 203);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative; 
+    margin-right: 100px; 
+}
+
+header .btn button:hover{
+    box-shadow: 0px 0px 8px rgb(246, 245, 246);
+}
+

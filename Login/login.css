@@ -40,9 +40,6 @@ section#login > div#formulario {
     padding: 10px;
 }
 
-
-
-
 form > input[type=submit] {
     display:block;
     font-size: 1em;
